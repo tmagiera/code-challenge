@@ -23,7 +23,6 @@
         "friendsofsymfony/rest-bundle": "0.13.*@dev",
         "jms/serializer-bundle": "0.12.*@dev",
         "nelmio/api-doc-bundle": "2.3.*@dev",
-        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
         "phpunit/phpunit": "dev-configuration"
     },
     "scripts": {
