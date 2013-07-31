@@ -63,14 +63,3 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
-
-# MongoDB configuration
-doctrine_mongodb:
-    connections:
-        default:
-            server:   mongodb://symfony:symfony@ds039078.mongolab.com:39078/codechallenge
-            options: {}
-    default_database: codechallenge
-    document_managers:
-        default:
-            auto_mapping: true
