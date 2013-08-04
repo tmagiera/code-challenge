@@ -23,7 +23,8 @@
         "friendsofsymfony/rest-bundle": "0.13.*@dev",
         "jms/serializer-bundle": "0.12.*@dev",
         "nelmio/api-doc-bundle": "2.3.*@dev",
-        "phpunit/phpunit": "dev-configuration"
+        "phpunit/phpunit": "dev-configuration",
+        "facebook/php-sdk": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

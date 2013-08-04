@@ -12,4 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class AppRepository extends EntityRepository
 {
+    /**
+     * Return order list of Apps
+     *
+     * @return array
+     */
+    public function getApps() {
+        $query = $this->createQueryBuilder('a')
+            ->orderBy('a.name', 'ASC')
+            ->getQuery();
+
+        return $query->getResult();
+    }
 }

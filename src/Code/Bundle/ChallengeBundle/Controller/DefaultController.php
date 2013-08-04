@@ -6,8 +6,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('CodeChallengeBundle:Default:index.html.twig', array('name' => $name));
+        $apps = $this->getDoctrine()->getRepository('CodeChallengeBundle:App')->getApps();
+        $developers = $this->getDoctrine()->getRepository('CodeChallengeBundle:Developer')->getDevelopers();
+
+        return $this->render('CodeChallengeBundle:Default:index.html.twig',
+            array(
+                'apps' => $apps,
+                'developers' => $developers,
+            )
+        );
     }
 }

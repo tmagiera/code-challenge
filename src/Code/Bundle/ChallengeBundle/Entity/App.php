@@ -4,6 +4,7 @@ namespace Code\Bundle\ChallengeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * App
@@ -25,16 +26,12 @@ class App
     /**
      * @var string
      *
+     * @Assert\Length(max="25")
+     * @Assert\Regex("/[0-9a-zA-Z]+/")
+     *
      * @ORM\Column(name="name", type="string", length=25)
      */
     private $name;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="current_build", type="integer")
-     */
-    private $currentBuild;
 
     /**
      * @var boolean
@@ -49,11 +46,22 @@ class App
     private $developers;
 
     /**
+     * @ORM\OneToMany(targetEntity="Build", mappedBy="app")
+     */
+    protected $builds;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
+        $this->builds = new ArrayCollection();
         $this->developers = new ArrayCollection();
+    }
+
+    public function setDevelopers(array $developers)
+    {
+        $this->developers = $developers;
     }
 
     /**
@@ -99,28 +107,6 @@ class App
         return $this->name;
     }
 
-    /**
-     * Set currentBuild
-     *
-     * @param integer $currentBuild
-     * @return App
-     */
-    public function setCurrentBuild($currentBuild)
-    {
-        $this->currentBuild = $currentBuild;
-    
-        return $this;
-    }
-
-    /**
-     * Get currentBuild
-     *
-     * @return integer 
-     */
-    public function getCurrentBuild()
-    {
-        return $this->currentBuild;
-    }
 
     /**
      * Set released
@@ -143,5 +129,61 @@ class App
     public function getReleased()
     {
         return $this->released;
+    }
+
+    /**
+     * Add developers
+     *
+     * @param \Code\Bundle\ChallengeBundle\Entity\Developer $developers
+     * @return App
+     */
+    public function addDeveloper(\Code\Bundle\ChallengeBundle\Entity\Developer $developers)
+    {
+        $this->developers[] = $developers;
+    
+        return $this;
+    }
+
+    /**
+     * Remove developers
+     *
+     * @param \Code\Bundle\ChallengeBundle\Entity\Developer $developers
+     */
+    public function removeDeveloper(\Code\Bundle\ChallengeBundle\Entity\Developer $developers)
+    {
+        $this->developers->removeElement($developers);
+    }
+
+    /**
+     * Add builds
+     *
+     * @param \Code\Bundle\ChallengeBundle\Entity\Build $builds
+     * @return App
+     */
+    public function addBuild(\Code\Bundle\ChallengeBundle\Entity\Build $builds)
+    {
+        $this->builds[] = $builds;
+    
+        return $this;
+    }
+
+    /**
+     * Remove builds
+     *
+     * @param \Code\Bundle\ChallengeBundle\Entity\Build $builds
+     */
+    public function removeBuild(\Code\Bundle\ChallengeBundle\Entity\Build $builds)
+    {
+        $this->builds->removeElement($builds);
+    }
+
+    /**
+     * Get builds
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getBuilds()
+    {
+        return $this->builds;
     }
 }

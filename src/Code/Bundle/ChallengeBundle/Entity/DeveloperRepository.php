@@ -12,4 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class DeveloperRepository extends EntityRepository
 {
+    /**
+     * Return order list of Developers
+     *
+     * @return array
+     */
+    public function getDevelopers() {
+        $query = $this->createQueryBuilder('d')
+            ->orderBy('d.name', 'ASC')
+            ->getQuery();
+
+        return $query->getResult();
+    }
 }

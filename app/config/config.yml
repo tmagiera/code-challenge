@@ -63,3 +63,9 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+services:
+    kernel.listener.build_listener:
+      class: Code\Bundle\ChallengeBundle\Event\BuildSubscriber
+      tags:
+        - { name: doctrine.event_listener, event: onFlush }

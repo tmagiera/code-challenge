@@ -3,6 +3,8 @@
 namespace Code\Bundle\ChallengeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Code\Bundle\ChallengeBundle\Entity\App;
 
 /**
  * Build
@@ -24,6 +26,8 @@ class Build
     /**
      * @var string
      *
+     * @Assert\Regex("/\d+\.\d+/")
+     *
      * @ORM\Column(name="version", type="string", length=16)
      */
     private $version;
@@ -36,13 +40,9 @@ class Build
     private $current;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="app_id", type="integer")
      * @ORM\ManyToOne(targetEntity="App")
-     * @ORM\JoinColumn(name="address_id", referencedColumnName="id")
      */
-    private $app_id;
+    private $app;
 
     /**
      * Get id
@@ -85,6 +85,7 @@ class Build
      */
     public function setCurrent($current)
     {
+        
         $this->current = $current;
     
         return $this;
@@ -98,5 +99,28 @@ class Build
     public function getCurrent()
     {
         return $this->current;
+    }
+
+    /**
+     * Set app
+     *
+     * @param \Code\Bundle\ChallengeBundle\Entity\App $app
+     * @return Build
+     */
+    public function setApp(App $app = null)
+    {
+        $this->app = $app;
+    
+        return $this;
+    }
+
+    /**
+     * Get app
+     *
+     * @return \Code\Bundle\ChallengeBundle\Entity\App 
+     */
+    public function getApp()
+    {
+        return $this->app;
     }
 }

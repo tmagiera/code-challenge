@@ -1,1 +1,46 @@
-Hello {{ name }}!
+<html>
+<head>
+    <title>Deployment portal</title>
+</head>
+<style>
+    body {background-color: white;}
+    h1,h3,p,b {font-family: Helvetica;}
+    .apps {padding: 10px; float:left }
+    .developers {padding: 10px; float:left }
+    .app {padding: 10px;}
+    .build,.developer {padding: 5px;}
+</style>
+<body>
+<div>
+    <h1>Deployment portal</h1>
+    <div class="apps">
+    <h3>Apps:</h3>
+    {% for app in apps %}
+        <div class="app">
+        <p>Name: <b>{{ app.name }}</b></p>
+            {% if app.builds %}
+            <p>Bulids</p>
+            {% for build in app.builds %}
+                <div class="build">
+                    <p>Build: {{ build.version }}</p>
+                </div>
+            {% endfor %}
+            {% endif %}
+            {% for developer in app.developers if app.developers %}
+                <div class="developer">
+                    <p>Active developer : {{ developer.name }} ({{ developer.email }})</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    </div>
+    <div class="developers">
+    <h3>Developers</h3>
+        {% for developer in developers %}
+            <div><p>{{ developer.name }} {{ developer.email }}</p></div>
+        {% endfor %}
+
+    </div>
+</div>
+</body>
+</html>
