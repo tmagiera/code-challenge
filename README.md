@@ -17,7 +17,11 @@ php app/console facebook:update
 php app/console server:run
 
 Run:
-now please visit: http://localhost:8000/
+now please visit:
+    main site: http://localhost:8000/
+    api documentation: http://localhost:8000/api/doc/
+    rest service : http://localhost:8000/api/builds
+
 
 Comment:
 I couldn't force Doctrine to update builds with current = false on build update - related code is in : Code\Bundle\ChallengeBundle\Event\BuildSubsriber but something is wrong. Sorry, but i don't have enough time for this excercise.
