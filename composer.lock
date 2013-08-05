@@ -470,12 +470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "5a4d5724e14fc07bb955a6ab898313fab4b230ea"
+                "reference": "249d83119ff8c671376bedd118416760184fc214"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/5a4d5724e14fc07bb955a6ab898313fab4b230ea",
-                "reference": "5a4d5724e14fc07bb955a6ab898313fab4b230ea",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/249d83119ff8c671376bedd118416760184fc214",
+                "reference": "249d83119ff8c671376bedd118416760184fc214",
                 "shasum": ""
             },
             "require": {
@@ -531,7 +531,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2013-06-16 18:40:01"
+            "time": "2013-08-05 08:20:25"
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
@@ -540,19 +540,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "8070624b47f7f171db4c9e4134436db7de51244c"
+                "reference": "e018cf34f6c8642eba40ca44871fead97616922a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/8070624b47f7f171db4c9e4134436db7de51244c",
-                "reference": "8070624b47f7f171db4c9e4134436db7de51244c",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/e018cf34f6c8642eba40ca44871fead97616922a",
+                "reference": "e018cf34f6c8642eba40ca44871fead97616922a",
                 "shasum": ""
             },
             "require": {
                 "doctrine/data-fixtures": "*",
                 "doctrine/doctrine-bundle": "~1.0",
                 "php": ">=5.3.2",
-                "symfony/doctrine-bridge": ">=2.1.0,<2.4-dev"
+                "symfony/doctrine-bridge": "~2.1"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -589,7 +589,7 @@
                 "Fixture",
                 "persistence"
             ],
-            "time": "2013-07-18 09:26:47"
+            "time": "2013-08-05 08:41:18"
         },
         {
             "name": "doctrine/inflector",
@@ -1218,12 +1218,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSSerializerBundle.git",
-                "reference": "c7f57e622ec4ad531f59ac79b2536b0cb5681559"
+                "reference": "5531198a73c4adee669a8a2d1452999349822771"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/c7f57e622ec4ad531f59ac79b2536b0cb5681559",
-                "reference": "c7f57e622ec4ad531f59ac79b2536b0cb5681559",
+                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/5531198a73c4adee669a8a2d1452999349822771",
+                "reference": "5531198a73c4adee669a8a2d1452999349822771",
                 "shasum": ""
             },
             "require": {
@@ -1279,7 +1279,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-07-29 12:32:39"
+            "time": "2013-07-29 12:36:36"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -2722,12 +2722,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "9a01db60e8b7552955cfcbef7caf0b24dc3119b4"
+                "reference": "3bcf32208ac0e55f3cf66a628e1dfbd2afc03dfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/9a01db60e8b7552955cfcbef7caf0b24dc3119b4",
-                "reference": "9a01db60e8b7552955cfcbef7caf0b24dc3119b4",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/3bcf32208ac0e55f3cf66a628e1dfbd2afc03dfb",
+                "reference": "3bcf32208ac0e55f3cf66a628e1dfbd2afc03dfb",
                 "shasum": ""
             },
             "require": {
@@ -2763,7 +2763,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-08-04 13:12:06"
+            "time": "2013-08-05 16:50:34"
         },
         {
             "name": "willdurand/negotiation",
