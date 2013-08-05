@@ -12,4 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class FeedRepository extends EntityRepository
 {
+    /**
+     * Latest facebook feeds
+     *
+     * @return array
+     */
+    public function getLatestFeeds() {
+        $query = $this->createQueryBuilder('f')
+            ->orderBy('f.created_date', 'DESC')
+            ->getQuery();
+
+        return $query->getResult();
+    }
 }

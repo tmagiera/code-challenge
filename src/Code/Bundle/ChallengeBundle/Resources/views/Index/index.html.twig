@@ -7,6 +7,7 @@
     h1,h3,p,b {font-family: Helvetica;}
     .apps {padding: 10px; float:left }
     .developers {padding: 10px; float:left }
+    .feeds {padding: 10px; float:left }
     .app {padding: 10px;}
     .build,.developer {padding: 5px;}
 </style>
@@ -35,11 +36,17 @@
     {% endfor %}
     </div>
     <div class="developers">
-    <h3>Developers</h3>
+        <h3>Developers</h3>
         {% for developer in developers %}
             <div><p>{{ developer.name }} {{ developer.email }}</p></div>
         {% endfor %}
 
+    </div>
+    <div class="feeds">
+        <h3>Latest feeds</h3>
+        {% for feed in feeds %}
+            <div><p>{{ feed.message }}</p><p>{{ feed.created_date }}</p></div>
+        {% endfor %}
     </div>
 </div>
 </body>
