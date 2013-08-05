@@ -20,9 +20,10 @@ class FacebookUpdateCommand extends Command
     {
         require 'vendor/facebook/php-sdk/src/facebook.php';
 
+        // Facebook configuration
         $facebook = new \Facebook(array(
-            'appId'  => '397258497042571',
-            'secret' => '36c1173041aeb1a3529151f5a556b6f5',
+            'appId'  => $this->getApplication()->getKernel()->getContainer()->getParameter('facebook_appid'),
+            'secret' => $this->getApplication()->getKernel()->getContainer()->getParameter('facebook_secret'),
         ));
 
         // Get Access Token

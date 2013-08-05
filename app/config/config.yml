@@ -69,3 +69,5 @@ services:
       class: Code\Bundle\ChallengeBundle\Event\BuildSubscriber
       tags:
         - { name: doctrine.event_listener, event: onFlush }
+
+
