@@ -18,9 +18,9 @@ php app/console server:run
 
 #Run:
 now please visit:
-    - main site: http://localhost:8000/
-    - api documentation: http://localhost:8000/api/doc/
-    - rest service : http://localhost:8000/api/builds
+- main site: http://localhost:8000/
+- api documentation: http://localhost:8000/api/doc/
+- rest service : http://localhost:8000/api/builds
 
 
 #Comment:
