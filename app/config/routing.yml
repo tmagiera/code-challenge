@@ -1,4 +1,7 @@
 code_challenge:
-    resource: "@CodeChallengeBundle/Resources/config/routing.yml"
-    prefix:   /
+  resource: "@CodeChallengeBundle/Resources/config/routing.yml"
+  prefix:   /
 
+NelmioApiDocBundle:
+  resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+  prefix:   /api/doc
