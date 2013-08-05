@@ -19,7 +19,6 @@ class FeedRepository extends EntityRepository
      */
     public function getLatestFeeds() {
         $query = $this->createQueryBuilder('f')
-            ->orderBy('f.created_date', 'DESC')
             ->getQuery();
 
         return $query->getResult();

@@ -12,4 +12,11 @@ use Doctrine\ORM\EntityRepository;
  */
 class BuildRepository extends EntityRepository
 {
+    public function getBuilds() {
+        $query = $this->createQueryBuilder('b')
+            ->orderBy('b.id', 'ASC')
+            ->getQuery();
+
+        return $query->getResult();
+    }
 }

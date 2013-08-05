@@ -70,5 +70,5 @@ services:
       tags:
         - { name: doctrine.event_listener, event: onFlush }
 
-nelmio_api_doc: ~
+nelmio_api_doc: ~
 

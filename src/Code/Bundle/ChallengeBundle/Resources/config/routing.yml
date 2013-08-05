@@ -1,3 +1,14 @@
 code_challenge_homepage:
     pattern:  /
     defaults: { _controller: CodeChallengeBundle:Index:index }
+
+code_challenge_rest_builds:
+    pattern:  /api/builds
+    defaults: { _controller: CodeChallengeBundle:Rest:builds, _format:  json }
+    methods: [GET]
+
+
+code_challenge_rest_apps:
+    pattern:  /api/apps
+    defaults: { _controller: CodeChallengeBundle:Rest:apps, _format:  json }
+    methods: [GET]

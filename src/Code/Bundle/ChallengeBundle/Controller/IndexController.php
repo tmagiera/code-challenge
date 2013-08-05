@@ -3,9 +3,13 @@
 namespace Code\Bundle\ChallengeBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class IndexController extends Controller
 {
+    /**
+     * @Route("/")
+     */
     public function indexAction()
     {
         $apps = $this->getDoctrine()->getRepository('CodeChallengeBundle:App')->getApps();
